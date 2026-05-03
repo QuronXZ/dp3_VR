@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
+<<<<<<< HEAD
+  controlID: 17
+=======
   controlID: 48
+>>>>>>> parent of b9c2c62 (commit_2)
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -140,12 +144,20 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+    width: 1918
+=======
     width: 1711
+>>>>>>> parent of b9c2c62 (commit_2)
     height: 1293
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
+<<<<<<< HEAD
+  controlID: 18
+=======
   controlID: 49
+>>>>>>> parent of b9c2c62 (commit_2)
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -166,12 +178,20 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+    width: 1918
+=======
     width: 1711
+>>>>>>> parent of b9c2c62 (commit_2)
     height: 761
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
+<<<<<<< HEAD
+  controlID: 19
+=======
   controlID: 50
+>>>>>>> parent of b9c2c62 (commit_2)
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -190,7 +210,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+    width: 395
+=======
     width: 359
+>>>>>>> parent of b9c2c62 (commit_2)
     height: 761
   m_MinSize: {x: 201, y: 226}
   m_MaxSize: {x: 4001, y: 4026}
@@ -214,9 +238,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
+    x: 395
+    y: 0
+    width: 1523
+=======
     x: 359
     y: 0
     width: 1352
+>>>>>>> parent of b9c2c62 (commit_2)
     height: 761
   m_MinSize: {x: 202, y: 226}
   m_MaxSize: {x: 4002, y: 4026}
@@ -244,7 +274,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 761
+<<<<<<< HEAD
+    width: 1918
+=======
     width: 1711
+>>>>>>> parent of b9c2c62 (commit_2)
     height: 532
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
@@ -269,9 +303,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
+    x: 1918
+    y: 0
+    width: 642
+=======
     x: 1711
     y: 0
     width: 849
+>>>>>>> parent of b9c2c62 (commit_2)
     height: 1293
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
@@ -373,10 +413,17 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
+    x: 1918
+    y: 79
+    width: 641
+    height: 1267
+=======
     x: 359
     y: 79
     width: 1350
     height: 735
+>>>>>>> parent of b9c2c62 (commit_2)
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -394,7 +441,11 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+<<<<<<< HEAD
+  m_TargetSize: {x: 641, y: 1246}
+=======
   m_TargetSize: {x: 1350, y: 714}
+>>>>>>> parent of b9c2c62 (commit_2)
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -409,10 +460,17 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
+    m_HBaseRangeMin: -320.5
+    m_HBaseRangeMax: 320.5
+    m_VBaseRangeMin: -623
+    m_VBaseRangeMax: 623
+=======
     m_HBaseRangeMin: -675
     m_HBaseRangeMax: 675
     m_VBaseRangeMin: -357
     m_VBaseRangeMax: 357
+>>>>>>> parent of b9c2c62 (commit_2)
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -430,16 +488,32 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
+<<<<<<< HEAD
+      width: 641
+      height: 1246
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 320.5, y: 623}
+=======
       width: 1350
       height: 714
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 675, y: 357}
+>>>>>>> parent of b9c2c62 (commit_2)
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
+      x: -320.5
+      y: -623
+      width: 641
+      height: 1246
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 641, y: 1267}
+=======
       x: -675
       y: -357
       width: 1350
@@ -447,6 +521,7 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1350, y: 735}
+>>>>>>> parent of b9c2c62 (commit_2)
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -475,8 +550,13 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
+    y: 24
+    width: 394
+=======
     y: 79
     width: 358
+>>>>>>> parent of b9c2c62 (commit_2)
     height: 735
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -492,9 +572,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: f8c9f8ff90faf8ffa471f9ffc471f9ff2479f9ff5279f9ff30aaf9ffc4e9f9ffe0e9f9ffce36faff6c4ffaff6e4ffaff1873faff747dfaff767dfaffc698faff40bdfafffcc6faff66fffaffde1cfbffc04ffbff0c54fbff406dfbffb091fbff1293fbff26c6fbff00e0fbff286bfdff346bfdff7671fdffd2c2fdffc6c6fdffe033feffdcdafeffd40affffbe25ffff4e2fffffb4faffff4c3c0100703c01008452010028550100c2560100a4590100344c02000e610200ea7002002ea6020058a7020032a80200b2cb0200b6d202009cdf02006aeb020044ec020066300300e2300300b8140400ea140400
+=======
       m_SelectedIDs: 66a9fcff
       m_LastClickedID: -218778
       m_ExpandedIDs: 34a2fdff8ef7feff90f7feffbaf1ffff42f2ffff68f2ffffd4f5ffff40f6ffff48f6ffff4cf6ffff52f6ffff6cf6ffff88f6ffff90f6ffff9af6ffffb4f6ffffd0f6ffffd8f6ffffe2f6fffffcf6ffff18f7ffff20f7ffff2af7ffff44f7ffff60f7ffff68f7ffff72f7ffff78f7ffff9cf7ffffc8f7ffffcef7fffff4f7ffff0cf8ffff16f8ffff1ef8ffff2af8ffff34f8ffffa0f8ffffa8f8ffffacf8ffffb2f8ffffccf8ffffe8f8fffff0f8fffffaf8ffff14f9ffff30f9ffff38f9ffff42f9ffff5cf9ffff78f9ffff80f9ffff8af9ffff90f9ffffb4f9ffffe0f9ffffe6f9ffff0cfaffff24faffff2efaffff36faffff42faffff6efaffff72faffffa2faffffbcfaffff00ea00000eea000048ea0000
+>>>>>>> parent of b9c2c62 (commit_2)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -540,9 +626,15 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
+    x: 396
+    y: 24
+    width: 1521
+=======
     x: 359
     y: 79
     width: 1350
+>>>>>>> parent of b9c2c62 (commit_2)
     height: 735
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1098,9 +1190,15 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
+<<<<<<< HEAD
+    m_Target: {x: -13.59825, y: 144.05862, z: -60.128483}
+    speed: 2
+    m_Value: {x: -13.59825, y: 144.05862, z: -60.128483}
+=======
     m_Target: {x: 5.616513, y: 3.0587869, z: 8.902569}
     speed: 2
     m_Value: {x: 5.616513, y: 3.0587869, z: 8.902569}
+>>>>>>> parent of b9c2c62 (commit_2)
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1146,6 +1244,15 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
+<<<<<<< HEAD
+    m_Target: {x: 0.3452833, y: 0.37743935, z: -0.15450029, w: 0.84534323}
+    speed: 2
+    m_Value: {x: 0.3452833, y: 0.37743935, z: -0.15450029, w: 0.8453432}
+  m_Size:
+    m_Target: 39.04658
+    speed: 2
+    m_Value: 39.04658
+=======
     m_Target: {x: -0.18131945, y: 0.8190279, z: -0.37446758, w: -0.3956725}
     speed: 2
     m_Value: {x: -0.1812772, y: 0.81883705, z: -0.37438032, w: -0.39558032}
@@ -1153,6 +1260,7 @@ MonoBehaviour:
     m_Target: 0.4145573
     speed: 2
     m_Value: 0.4145573
+>>>>>>> parent of b9c2c62 (commit_2)
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1208,8 +1316,13 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
+    y: 785
+    width: 1917
+=======
     y: 840
     width: 1710
+>>>>>>> parent of b9c2c62 (commit_2)
     height: 506
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1233,7 +1346,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
+    - Assets/Modelss/Props/Wooden Crate
+=======
     - Assets/mats
+>>>>>>> parent of b9c2c62 (commit_2)
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1243,16 +1360,27 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+<<<<<<< HEAD
+  - Assets/Modelss/Props/Wooden Crate
+=======
   - Assets/mats
+>>>>>>> parent of b9c2c62 (commit_2)
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\DGD Studio\Desktop\tejas\dp3_TEJS_TRY
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
+    scrollPos: {x: 0, y: 106}
+    m_SelectedIDs: 88200100
+    m_LastClickedID: 73864
+    m_ExpandedIDs: 00000000b0ea0000b2ea0000b4ea0000b6ea0000b8ea0000baea0000bcea0000beea0000c0ea0000c2ea0000c4ea0000c6ea0000c8ea0000caea0000ccea0000ceea0000d0ea0000d2ea0000d4ea0000d6ea0000d8ea0000daea0000
+=======
     scrollPos: {x: 0, y: 95}
     m_SelectedIDs: 24f10000
     m_LastClickedID: 61732
     m_ExpandedIDs: 000000009cea00009eea0000a0ea0000a2ea0000a4ea0000a6ea0000aaea0000acea0000aeea0000b0ea0000b2ea0000b4ea0000b6ea000024f1000026f100004af100006ef100004041010000ca9a3bffffff7f
+>>>>>>> parent of b9c2c62 (commit_2)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1281,7 +1409,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
+    m_ExpandedIDs: 00000000b0ea0000b2ea0000b4ea0000b6ea0000b8ea0000baea0000bcea0000beea0000c0ea0000c2ea0000c4ea0000c6ea0000c8ea0000caea0000ccea0000ceea0000d0ea0000d2ea0000d4ea0000d6ea0000d8ea0000daea0000
+=======
     m_ExpandedIDs: 000000009cea00009eea0000a0ea0000a2ea0000a4ea0000a6ea0000a8ea0000aaea0000acea0000aeea0000b0ea0000b2ea0000b4ea0000b6ea0000
+>>>>>>> parent of b9c2c62 (commit_2)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1307,10 +1439,17 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c623000058370100fcb8020040b90200beef03002cb10400a4c900005ec9000054e80000b2e8000058cd0000b8510400ea520400fceb0000deee0000d20a0200d40a0200dc4a0100743f0100723f0100ae9e0000
+=======
     m_SelectedInstanceIDs: 9ec0fcff
     m_LastClickedInstanceID: -212834
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000058370100fcb8020040b90200beef03002cb10400a4c900005ec9000054e80000b2e8000058cd0000b8510400ea520400
+>>>>>>> parent of b9c2c62 (commit_2)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1362,7 +1501,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 840
-    width: 1710
+    width: 1917
     height: 506
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1396,9 +1535,15 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
+    x: 1919
+    y: 24
+    width: 641
+=======
     x: 1711
     y: 79
     width: 848
+>>>>>>> parent of b9c2c62 (commit_2)
     height: 1267
   m_SerializedDataModeController:
     m_DataMode: 0

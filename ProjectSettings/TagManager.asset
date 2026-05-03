@@ -9,6 +9,7 @@ TagManager:
   - handle
   - blade
   - hittable
+  - Sliceable
   layers:
   - Default
   - TransparentFX

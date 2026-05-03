@@ -10,11 +10,13 @@ public class sword_fx : MonoBehaviour
 {
     [Header("Scratch Effect")]
     public GameObject hitVFXPrefab;
-    public GameObject scratchPrefab;
+    public GameObject scratchPrefab, bloodprefab;
     public float minSwingVelocity = 1.5f;
 
     [Header("Hit Filtering")]
-    public string hittableTag = "hittable";
+    public string hittableTag = "hittable"; 
+    public float scratcheffectdestroyafter = 5f;
+    public float bloodeffectdestroyafter = 5f;
 
     [Header("Cooldown")]
     public float effectCooldown = 0.1f;
@@ -77,7 +79,32 @@ public class sword_fx : MonoBehaviour
         }
 
         // Cleanup
-        Destroy(vfx, 2f);
+        Destroy(vfx, scratcheffectdestroyafter);
+    }
+
+    public void Spawnblood(Collision collision)
+    {
+        if (hitVFXPrefab == null) return;
+
+        ContactPoint contact = collision.contacts[0];
+
+        Vector3 pos = contact.point;
+        Quaternion rot = Quaternion.LookRotation(-contact.normal);
+
+        GameObject vfx = Instantiate(bloodprefab, pos, rot);
+
+        // Optional: parent it so it follows moving objects
+        vfx.transform.SetParent(collision.transform);
+
+        // If it has VisualEffect component, play it
+        var visualEffect = vfx.GetComponent<VisualEffect>();
+        if (visualEffect != null)
+        {
+            visualEffect.Play();
+        }
+
+        // Cleanup
+        Destroy(vfx, bloodeffectdestroyafter);
     }
     /*    {
             if (scratchPrefab == null) return;
