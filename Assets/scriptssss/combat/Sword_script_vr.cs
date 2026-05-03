@@ -444,7 +444,7 @@ public class Sword_script_vr : MonoBehaviour
                     sword_Fx.PlayHitEffects(collision);
                 }
 
-                Debug.Log("Hit enemy!");
+                //Debug.Log("Hit enemy!");
             }
         }
     }

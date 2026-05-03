@@ -2,7 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class dailogue_appear : MonoBehaviour
+/*public class dailogue_appear : MonoBehaviour
 {
     public TextMeshProUGUI Textcompo;
     public string[] lines;
@@ -68,6 +68,211 @@ public class dailogue_appear : MonoBehaviour
                 StopAllCoroutines();
                 Textcompo.text = lines[index];
             }
+        }
+    }
+}*/
+
+
+
+/*using System.Collections;
+using TMPro;
+using UnityEngine;
+
+public class dailogue_appear : MonoBehaviour
+{
+    public TextMeshProUGUI Textcompo;
+    public string[] lines;
+    public float textspeed;
+
+    [Header("Card Progression")]
+    public GameObject[] cards; // Array of card GameObjects
+    public int currentCardIndex = 0;
+
+    private int index;
+    private bool isTyping = false;
+    private bool dialogueComplete = false;
+    private Coroutine typingCoroutine = null;
+
+    void Start()
+    {
+        Textcompo.text = string.Empty;
+        ShowCurrentCard();
+        StartDialogue();
+    }
+
+    void ShowCurrentCard()
+    {
+        // Hide all cards
+        for (int i = 0; i < cards.Length; i++)
+        {
+            if (cards[i] != null)
+                cards[i].SetActive(i == currentCardIndex);
+        }
+
+    }
+
+    void StartDialogue()
+    {
+        index = 0;
+        dialogueComplete = false;
+        typingCoroutine = StartCoroutine(Typeline());
+    }
+
+    IEnumerator Typeline()
+    {
+        isTyping = true;
+        Textcompo.text = string.Empty;
+
+        foreach (char c in lines[index].ToCharArray())
+        {
+            Textcompo.text += c;
+            yield return new WaitForSeconds(textspeed);
+        }
+
+        isTyping = false;
+        typingCoroutine = null;
+    }
+
+    void NextLine()
+    {
+        if (index < lines.Length - 1)
+        {
+            index++;
+            if (typingCoroutine != null)
+                StopCoroutine(typingCoroutine);
+            typingCoroutine = StartCoroutine(Typeline());
+        }
+        else
+        {
+            // All dialogues finished - move to next card
+            dialogueComplete = true;
+            gameObject.SetActive(false);
+
+            // Move to next card
+            currentCardIndex++;
+
+            if (currentCardIndex < cards.Length)
+            {
+                ShowCurrentCard();
+                gameObject.SetActive(true);
+                StartDialogue();
+                Debug.Log($"Showing card {currentCardIndex}");
+            }
+            else
+            {
+                Debug.Log("All cards completed!");
+                gameObject.SetActive(false);
+            }
+        }
+    }
+
+    public void NextDialogueBtn()
+    {
+        if (dialogueComplete) return;
+
+        if (isTyping)
+        {
+            // Skip to end
+            if (typingCoroutine != null)
+                StopCoroutine(typingCoroutine);
+            Textcompo.text = lines[index];
+            isTyping = false;
+        }
+        else
+        {
+            NextLine();
+        }
+    }
+}
+
+*/
+
+
+using System.Collections;
+using TMPro;
+using UnityEngine;
+
+public class dailogue_appear : MonoBehaviour
+{
+    public TextMeshProUGUI Textcompo;
+    public string[] lines;
+    public float textspeed;
+
+    private int index;
+    private bool isTyping = false;
+    private bool dialogueComplete = false;
+    private Coroutine typingCoroutine = null;
+    public CardParentManager parentManager;
+
+    void Start()
+    {
+        Textcompo.text = string.Empty;
+        parentManager = GetComponentInParent<CardParentManager>();
+        StartDialogue();
+    }
+
+    void StartDialogue()
+    {
+        index = 0;
+        dialogueComplete = false;
+        typingCoroutine = StartCoroutine(Typeline());
+    }
+
+    IEnumerator Typeline()
+    {
+        isTyping = true;
+        Textcompo.text = string.Empty;
+
+        foreach (char c in lines[index].ToCharArray())
+        {
+            Textcompo.text += c;
+            yield return new WaitForSeconds(textspeed);
+        }
+
+        isTyping = false;
+        typingCoroutine = null;
+    }
+
+    void NextLine()
+    {
+        if (index < lines.Length - 1)
+        {
+            index++;
+            if (typingCoroutine != null)
+                StopCoroutine(typingCoroutine);
+            typingCoroutine = StartCoroutine(Typeline());
+        }
+        else
+        {
+            dialogueComplete = true;
+
+            // Tell parent manager to show next card
+            if (parentManager != null)
+            {
+                parentManager.OnCardCompleted(gameObject);
+            }
+            else
+            {
+                Debug.LogWarning("No parent manager found!"); 
+                gameObject.SetActive(false);
+            }
+        }
+    }
+
+    public void NextDialogueBtn()
+    {
+        if (dialogueComplete) return;
+
+        if (isTyping)
+        {
+            if (typingCoroutine != null)
+                StopCoroutine(typingCoroutine);
+            Textcompo.text = lines[index];
+            isTyping = false;
+        }
+        else
+        {
+            NextLine();
         }
     }
 }

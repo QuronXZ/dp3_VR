@@ -183,7 +183,7 @@ public class actor : MonoBehaviour
 {
     int currentHealth;
     public int maxHealth;
-    public GameManager manager;
+    public GameManager_lvl1 manager;
 
     [Header("Slicing Settings")]
     public bool enableSlicingOnLastHit = true;
@@ -199,6 +199,7 @@ public class actor : MonoBehaviour
     // Reference to sliceable component (will be added when needed)
     private Sliceable sliceableComponent;
     private bool isSlicingEnabled = false;
+    private bool hasDied = false; // Prevent double notifications
 
     void Awake()
     {
@@ -220,14 +221,15 @@ public class actor : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
+        if (hasDied) return; // Already dead, ignore damage
         currentHealth -= amount;
-        Debug.Log("Health: " + currentHealth);
+        //Debug.Log("Health: " + currentHealth);
 
         // Track hits for gate unlocking (only if not already notified)
         if (requiresMultipleHitsForGate && !hasNotifiedGateReady)
         {
             currentHitCount++;
-            Debug.Log($"Hit count: {currentHitCount}/{hitsRequiredForGate}");
+            //Debug.Log($"Hit count: {currentHitCount}/{hitsRequiredForGate}");
 
             // Check if enough hits landed to unlock gate
             if (currentHitCount >= hitsRequiredForGate && !hasNotifiedGateReady)
@@ -268,6 +270,14 @@ public class actor : MonoBehaviour
         Debug.Log("Final hit! Enemy will be sliced!");
         isSlicingEnabled = true;
 
+        // IMPORTANT: Notify GameManager BEFORE slicing
+        if (!hasNotifiedGateReady && manager != null)
+        {
+            manager.EnemyDied(gameObject);
+            hasNotifiedGateReady = true;
+            Debug.Log("Notified GameManager before slicing");
+        }
+
         // Change tag to sliceable
         gameObject.tag = sliceableTag;
 
@@ -283,10 +293,23 @@ public class actor : MonoBehaviour
             sliceableComponent.ShareVertices = false;
             sliceableComponent.SmoothVertices = true;
         }
+        
+
     }
 
     void Death()
     {
+        if (hasDied) return;
+        hasDied = true;
+
+        // Always notify GameManager if not already notified
+        if (!hasNotifiedGateReady && manager != null)
+        {
+            manager.EnemyDied(gameObject);
+            hasNotifiedGateReady = true;
+            Debug.Log("Notified GameManager on death");
+        }
+
         // Only destroy if not already being sliced
         if (!isSlicingEnabled)
         {
@@ -298,6 +321,7 @@ public class actor : MonoBehaviour
                     manager.EnemyDied(gameObject);
                 }
             }
+            Audio_manager.Instance.PlayBreak();
             Destroy(gameObject);
         }
         else
