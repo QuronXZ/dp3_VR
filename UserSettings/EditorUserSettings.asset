@@ -9,7 +9,6 @@ EditorUserSettings:
       value: 18134705175a055722080a3115371d4a0d55006876786860616b0471b8b5666dacb72ba5a52a362c3c0ee63201181433fe3e101bf3250b06144ca74c24f1190708e016c213c61a52f91c12cac80fd8edd298e1e4d1fde2cacddeacbcc1fee7eef0e3b6faa69af9ceaeaaec81a6d2c2c8c8c4b2e5dfd5ccd3f8cf
       flags: 0
     RecentlyUsedSceneGuid-0:
-<<<<<<< HEAD
       value: 065405565c515c5a0c56552648765c4441164e2b2e7f7536287e1935b0e1646d
       flags: 0
     RecentlyUsedSceneGuid-1:
@@ -17,30 +16,6 @@ EditorUserSettings:
       flags: 0
     RecentlyUsedSceneGuid-2:
       value: 5604500706560a0b540f5f20467a094441151a2b2e7972652f7c4932b1e1366b
-=======
-      value: 5054555551565b0a550c0a7315275a44174f4028797e77322b781c63e1b93761
-      flags: 0
-    RecentlyUsedSceneGuid-1:
-      value: 5100075f5054585a0b580a7746755d44434e1b2c7e2e74657b794f63e6e36c69
-      flags: 0
-    RecentlyUsedSceneGuid-2:
-      value: 5604500706560a0b540f5f20467a094441151a2b2e7972652f7c4932b1e1366b
-      flags: 0
-    RecentlyUsedSceneGuid-3:
-      value: 0755050053570f5f0b5d097242220f444e161d7b287a76672c2a1f6be1b16768
-      flags: 0
-    RecentlyUsedSceneGuid-4:
-      value: 570051025502080b5c5e5f7216760644144f1a7329297f67792b4e66e7e2313b
-      flags: 0
-    RecentlyUsedSceneGuid-5:
-      value: 5a05045403575b0e095b5d7349745c444e15482c287b72637c284e6ab2b76469
-      flags: 0
-    RecentlyUsedSceneGuid-6:
-      value: 0755555201005d02080c552743730f4443151b28297a72312e7a1867b4e26d6c
-      flags: 0
-    RecentlyUsedSceneGuid-7:
-      value: 0253515353005102085e0d274573094412161c7c782e20627c2c4f6be1b26d3c
->>>>>>> parent of b9c2c62 (commit_2)
       flags: 0
     RecentlyUsedSceneGuid-3:
       value: 0755555201005d02080c552743730f4443151b28297a72312e7a1867b4e26d6c
@@ -61,11 +36,7 @@ EditorUserSettings:
       value: 0100565f5d0251090b0a5b7115765a444e161d7d2a2d2232792f4c60b1b9646c
       flags: 0
     RecentlyUsedSceneGuid-9:
-<<<<<<< HEAD
       value: 53080150520051580e570f2747200844141540782e2a7766287b1967b2b66d6c
-=======
-      value: 5206015555020f5d540c547b42750d44414e4e2c752a76327a2a4931bbe2373b
->>>>>>> parent of b9c2c62 (commit_2)
       flags: 0
     lightmappingBakingProfile:
       value: 51
