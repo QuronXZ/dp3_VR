@@ -1,7 +1,8 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
-public class GameManager_lvl1 : MonoBehaviour
+public class GameManager_lvl2 : MonoBehaviour
+
 {
     [Header("Section Settings")]
     public List<GameObject> enemiesInSection; // Drag enemy GameObjects here
@@ -9,7 +10,7 @@ public class GameManager_lvl1 : MonoBehaviour
 
     [Header("Card Settings")]
     public CardParentManager cardParentManager;
-    
+
     //public CardTrigger[] cardTriggers; 
 
     [Header("Gate Settings")]
@@ -29,9 +30,7 @@ public class GameManager_lvl1 : MonoBehaviour
     private int enemiesRemaining;
     private bool gateUnlocked = false;
     private bool isGateOpening = false;
-
-    public bool tanhaji_lvl, baji_lvl, devi_lvl;
-    public statue_show statue;
+    private Dictionary<int, bool> cardClosedStatus = new Dictionary<int, bool>();
 
     void Start()
     {
@@ -81,6 +80,20 @@ public class GameManager_lvl1 : MonoBehaviour
         }
     }
 
+    // Call this when card is closed (from CardParentManager)
+    public void OnCardClosed(int cardIndex)
+    {
+        cardClosedStatus[cardIndex] = true;
+        Debug.Log($"Card {cardIndex} closed");
+    }
+
+    // Check if card is closed
+    public bool IsCardClosed(int cardIndex)
+    {
+        if (cardClosedStatus.ContainsKey(cardIndex))
+            return cardClosedStatus[cardIndex];
+        return false;
+    }
 
     public void EnemyDied(GameObject enemy)
     {
@@ -99,26 +112,11 @@ public class GameManager_lvl1 : MonoBehaviour
             if (enemiesRemaining <= 0)
             {
                 AllEnemiesDefeated();
-                if (tanhaji_lvl)
-                {
-                    Debug.Log("Showing Tanhaji");
-                    statue.show1st();
-                }
-                if (baji_lvl)
-                {
-                    Debug.Log("Showing Baji");
-                    statue.show2nd();
-                }
-                if (devi_lvl)
-                {
-                    Debug.Log("Showing devi");
-                    statue.show3rd();
-                }
-
             }
         }
     }
-    
+
+
 
     public void AllEnemiesDefeated()
     {
@@ -182,9 +180,9 @@ public class GameManager_lvl1 : MonoBehaviour
             {
                 gateAnimator.SetTrigger("Open");
             }
-            
-            cardParentManager.ForceShowCard(5);
-            
+
+            cardParentManager.ForceShowCard(9);
+
             Debug.Log(unlockMessage);
         }
     }

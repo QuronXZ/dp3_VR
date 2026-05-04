@@ -202,8 +202,16 @@ public class CardParentManager : MonoBehaviour
     {
         if (cardIndex >= 0 && cardIndex < cards.Count)
         {
+
+            Debug.Log("card indexxxx: "+ cardIndex); 
             currentCardIndex = cardIndex;
+            canva.enabled = true;
             ShowOnlyCard(currentCardIndex);
+        }
+        else
+        {
+            Debug.Log("in EKKKEEERRR");
+            Debug.Log("in EKKKEEERRR");
         }
     }
 }

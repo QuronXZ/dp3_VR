@@ -1,17 +1,16 @@
 using UnityEngine;
 
-
-public class TriggerZone : MonoBehaviour
+public class TriggetZone_2 : MonoBehaviour
 {
-    public int cardIndexToShow = 0;
+    public int cardIndexToShow = 6;
     private bool triggered = false;
-    public GameManager_lvl1 lvl1;
+    public GameManager_lvl2 lvl2;
 
     void OnTriggerExit(Collider other)
     {
-        //if (triggered) return;
+        if (triggered) return;
         if (!other.CompareTag("Player")) return;
-        if (gameObject.name== "entrry1 (1)")
+        if (gameObject.name == "entrry1 (1)")
         {
             Debug.Log("INSIDE 2nd lvlllll");
         }
@@ -21,6 +20,6 @@ public class TriggerZone : MonoBehaviour
         }
 
         triggered = true;
-        lvl1.ShowCardFromTrigger(cardIndexToShow);
+        lvl2.ShowCardFromTrigger(cardIndexToShow);
     }
 }
